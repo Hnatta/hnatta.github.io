@@ -15,6 +15,9 @@ video {
 }</style>
 </head>
 <body>
+<script src="https://cdn.jsdelivr.net/npm/hls.js"></script>
+  <script src="https://unpkg.com/plyr@3"></script>
+  <script src="./script.js"></script>
   <div class="container">
     <video controls crossorigin playsinline >
       <source 
@@ -23,9 +26,7 @@ video {
       >
     </video>
   </div>
-<script src="https://cdn.jsdelivr.net/npm/hls.js"></script>
-  <script src="https://unpkg.com/plyr@3"></script>
-  <script src="./script.js"></script>
+
   <script>document.addEventListener("DOMContentLoaded", () => {
   const video = document.querySelector("video");
   const source = video.getElementsByTagName("source")[0].src;
