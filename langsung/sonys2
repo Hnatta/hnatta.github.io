@@ -1,31 +1,27 @@
-<!DOCTYPE html>
-<html dir='ltr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="noindex" />
-<style type="text/css">
-body {
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js"></script>
+  <script src="https://unpkg.com/plyr@3"></script>
+  <script src="./script.js"></script>
+<style>
+.container {
   background: #000;
   margin: 0;
   padding: 0;
 }
-#player {
-  height: 100vh !important;
-}3
+video {
+	width: 100%;
+}
 </style>
-</head>
-<body>
-<script src="https://cdn.jsdelivr.net/npm/hls.js"></script>
-  <script src="https://unpkg.com/plyr@3"></script>
-  <script src="./script.js"></script>
+  <div class="container">
     <video controls crossorigin playsinline >
       <source 
         type="application/x-mpegURL" 
         src="https://dai.google.com/linear/hls/event/LK-ik89MQIi_pWBbg74KNQ/master.m3u8"
       >
     </video>
-    <script>
-    document.addEventListener("DOMContentLoaded", () => {
+  </div>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
   const video = document.querySelector("video");
   const source = video.getElementsByTagName("source")[0].src;
   
@@ -75,7 +71,6 @@ body {
   }
 });
 
-    </script>
-  </body>
-</html>
+</script>
+
 
